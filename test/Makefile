@@ -6,7 +6,12 @@ SIM ?= icarus
 WAVES ?= 1
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES := project.v
+PROJECT_SOURCES += tm-fsm.v
+PROJECT_SOURCES += tm-spi.v
+PROJECT_SOURCES += tm-spi-read.v
+PROJECT_SOURCES += tm-tape.v
+PROJECT_SOURCES += tm-tape-pred.v
 
 ifneq ($(GATES),yes)
 
