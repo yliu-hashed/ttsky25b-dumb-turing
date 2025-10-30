@@ -11,6 +11,7 @@ PROJECT_SOURCES += tm-fsm.v
 PROJECT_SOURCES += tm-spi.v
 PROJECT_SOURCES += tm-spi-read.v
 PROJECT_SOURCES += tm-tape.v
+PROJECT_SOURCES += tm-tape-cache.v
 PROJECT_SOURCES += tm-tape-pred.v
 
 ifneq ($(GATES),yes)
@@ -41,6 +42,7 @@ COMPILE_ARGS 		+= -I$(SRC_DIR)
 
 # Include the testbench sources:
 VERILOG_SOURCES += $(PWD)/tb.v
+VERILOG_SOURCES += $(PWD)/23LC512.v
 TOPLEVEL = tb
 
 # List test modules to run, separated by commas and without the .py suffix:
