@@ -15,7 +15,7 @@ module tm_tape_pred (
   output wire pred_l_o
   );
 
-  parameter PRED_HIST_BITS = 2;
+  parameter PRED_HIST_BITS = 3;
   localparam COUNTER_COUNT = 2 ** PRED_HIST_BITS;
 
   localparam HISTORY_BITS = PRED_HIST_BITS + 3;

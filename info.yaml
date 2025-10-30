@@ -22,6 +22,7 @@ project:
     - "tm-spi.v"
     - "tm-spi-read.v"
     - "tm-tape.v"
+    - "tm-tape-cache.v"
     - "tm-tape-pred.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
