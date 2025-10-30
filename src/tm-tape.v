@@ -5,21 +5,21 @@
 `default_nettype none
 
 module tm_tape (
-  input         clk,
-  input         rst_n,
+  input  wire        clk,
+  input  wire        rst_n,
   // SPI
-  output        tape_spi_mosi,
-  input         tape_spi_miso,
-  output        tape_spi_cs,
-  output        tape_spi_sck,
+  output wire        tape_spi_mosi,
+  input  wire        tape_spi_miso,
+  output wire        tape_spi_cs,
+  output wire        tape_spi_sck,
   // control
-  input         move_i,
-  input         move_dir_i, // right is 1, left is 0
-  input  [ 7:0] move_data_i,
-  output        move_done_o,
+  input  wire        move_i,
+  input  wire        move_dir_i, // right is 1, left is 0
+  input  wire [ 7:0] move_data_i,
+  output wire        move_done_o,
   // read data
-  output [ 7:0] data_o,
-  output        valid_o
+  output wire [ 7:0] data_o,
+  output wire        valid_o
   );
 
   parameter CACHE_BITS = 3;
